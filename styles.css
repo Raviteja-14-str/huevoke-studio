@@ -286,36 +286,56 @@ body {
   font-weight:300;
   letter-spacing:-.012em;
 }
+.grain { opacity:.045; }
+.site-header {
+  height:72px;
+  padding-left:6vw;
+  padding-right:6vw;
+}
 .wordmark {
+  font-size:19px;
   font-weight:500;
-  letter-spacing:.2em;
+  letter-spacing:.24em;
 }
 .wordmark span { font-weight:400; }
 .main-nav,.header-actions,.button,.text-link {
   font-weight:400;
-  letter-spacing:.11em;
+  letter-spacing:.13em;
 }
+.main-nav { gap:30px; font-size:9px; }
+.header-actions { font-size:9px; }
 .eyebrow,.control-label {
   font-size:9px;
   letter-spacing:.16em;
 }
 h1,h2 {
   font-weight:300;
-  letter-spacing:-.052em;
-  line-height:.96;
+  letter-spacing:-.047em;
+  line-height:1;
 }
+h2 { font-size:clamp(42px,5.3vw,82px); }
 h1 em,h2 em {
   font-weight:400;
-  letter-spacing:-.04em;
+  letter-spacing:-.032em;
 }
 .hero h1 {
-  font-size:clamp(54px,6.1vw,96px);
-  line-height:.96;
+  font-size:clamp(52px,5.55vw,86px);
+  line-height:.99;
+  margin-bottom:32px;
 }
 .body-copy,.hero-deck {
   font-weight:300;
-  line-height:1.9;
+  line-height:1.95;
 }
+.hero {
+  grid-template-columns:40% 60%;
+  padding-left:8vw;
+  padding-right:6vw;
+}
+.hero-copy { max-width:570px; }
+.hero-deck { max-width:360px; font-size:12px; }
+.hero-art { width:31vw; height:31vw; right:19%; }
+.hero-sun { width:32vw; height:32vw; right:11%; }
 .button {
   min-height:48px;
   font-weight:400;
@@ -331,14 +351,21 @@ h1 em,h2 em {
   color:var(--ink);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
+  padding-left:8vw;
+  padding-right:8vw;
 }
 .trust-bar > div {
-  min-height:126px;
+  min-height:116px;
   border-color:var(--line);
+  padding-top:24px;
+  padding-bottom:24px;
 }
 .trust-bar strong {
+  font-family:var(--sans);
+  font-style:normal;
   font-weight:400;
-  font-size:17px;
+  font-size:13px;
+  letter-spacing:-.015em;
 }
 .trust-bar small {
   color:#72756c;
@@ -348,7 +375,7 @@ h1 em,h2 em {
 .spaces { background:#eee8de; }
 .spaces-grid h3 {
   font-weight:400;
-  font-size:21px;
+  font-size:20px;
 }
 
 .product-story {
@@ -373,12 +400,13 @@ h1 em,h2 em {
 .variant-rail h3 {
   font-weight:400;
   letter-spacing:-.025em;
+  font-size:27px;
 }
 .variant-rail p { color:#70736a; }
 
 .world-elements { background:#858979; }
 .world-indian { background:#c78670; }
-.world-footer h3 { font-weight:400; }
+.world-footer h3 { font-weight:400; font-size:39px; }
 .product-info h3 {
   font-size:16px;
   font-weight:400;
@@ -398,8 +426,9 @@ h1 em,h2 em {
   color:#666a61;
 }
 .trade-cta h2 {
-  font-size:clamp(50px,6.5vw,98px);
+  font-size:clamp(46px,5.6vw,84px);
   font-weight:300;
+  max-width:820px;
 }
 .site-footer .wordmark { font-weight:500; }
 
@@ -413,10 +442,34 @@ h1 em,h2 em {
 }
 
 @media (max-width:600px) {
+  .site-header {
+    height:68px;
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+  .wordmark { font-size:18px; }
+  .hero {
+    display:block;
+    padding:0 5vw 50px;
+  }
   .hero h1 {
-    font-size:clamp(46px,14.5vw,62px);
-    letter-spacing:-.045em;
-    line-height:.98;
+    font-size:clamp(43px,13.4vw,56px);
+    letter-spacing:-.04em;
+    line-height:1.01;
+  }
+  .hero-copy { padding-top:118px; }
+  .hero-deck { font-size:11px; line-height:1.9; }
+  .hero-art {
+    width:76vw;
+    height:70vw;
+    right:4%;
+    top:8%;
+  }
+  .hero-sun {
+    width:78vw;
+    height:78vw;
+    right:3%;
+    top:9%;
   }
   .panel {
     padding-top:105px;
@@ -433,5 +486,5 @@ h1 em,h2 em {
   .editorial-specs div,
   .editorial-specs div + div { border-color:var(--line); }
   .trade-cta { padding-top:105px; padding-bottom:105px; }
-  .trade-cta h2 { font-size:clamp(45px,13vw,60px); }
+  .trade-cta h2 { font-size:clamp(42px,12vw,54px); }
 }
